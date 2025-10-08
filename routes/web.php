@@ -1,16 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
 Route::get('/ketua', function () {
     return view('selesai');
 });
-=======
-Route::get('Anggota', function () {
-    return view('Anggota');
-});
->>>>>>> Projek12/putra
+Route::get('dashboard', [DashboardController::class, 'index'])
+    ->name('dashboard');
